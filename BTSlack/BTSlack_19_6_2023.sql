@@ -56,7 +56,8 @@ INSERT INTO SANPHAM(TENSP,DVT,NUOCSX,GIA) VALUES
 ("TỦ LẠNH","CÁI","TRUNG QUỐC",4),
 ("ĐIỆN THOẠI","CÁI","VIỆT NAM",3),
 ("GẠO","CÂN","VIỆT NAM",2),
-('KHOAI', 'CÂN', 'TRUNG QUỐC', '1');
+('KHOAI', 'CÂN', 'TRUNG QUỐC', '1'),
+( 'NGÔ', 'CÂN', 'NHẬT BẢN', '1');
 
 INSERT INTO NHANVIEN(HOTEN,NGVL,SODT) VALUES 
 ("T","2022-5-12","01234567899"),
@@ -129,7 +130,7 @@ SELECT SOHD,TRIGIA
 FROM HOADON
 WHERE  TRIGIA=ALL(SELECT MAX(TRIGIA) AS TRIGIAMAX FROM HOADON WHERE YEAR(NGAY)=2023 GROUP BY YEAR(NGAY)=2023);
 
--- 6. Tìm họ tên khách hàng đã mua hóa đơn có trị giá cao nhất trong năm 2006.
+-- 6. Tìm họ tên khách hàng đã mua hóa đơn có trị giá cao nhất trong năm 2023.
 
 SELECT HOTEN 
 FROM KHACHHANG
@@ -180,11 +181,23 @@ FROM SANPHAM
 GROUP BY NUOCSX;
 
 -- 14. Với từng nước sản xuất, tìm giá bán cao nhất, thấp nhất, trung bình của các sản phẩm.
+SELECT NUOCSX,MAX(GIA) AS `GIÁ CAO NHẤT`,MIN(GIA) AS `GIÁ THẤP NHẤT`,AVG(GIA) `GIÁ TRUNG BÌNH`
+FROM SANPHAM
+GROUP BY NUOCSX;
 
+-- 15 .Tính doanh thu bán hàng mỗi ngày.
 
+SELECT NGAY,SUM(TRIGIA) AS `DOANH THU`
+FROM HOADON
+GROUP BY NGAY;
+-- 16. Tính tổng số lượng của từng sản phẩm bán ra trong tháng 12/2022.
 
-
-
+SELECT TENSP,SUM(SL) AS `SỐ LƯỢNG BÁN RA TRONG THÁNG 12/2022`
+FROM SANPHAM
+JOIN CTHD ON SANPHAM.MASP=CTHD.MASP
+JOIN HOADON ON CTHD.SOHD=HOADON.SOHD
+WHERE MONTH(NGAY)=12 AND YEAR(NGAY)=2022
+GROUP BY TENSP;
 
 
 
