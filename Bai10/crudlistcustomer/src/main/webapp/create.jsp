@@ -7,10 +7,35 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-  <head>
-    <title>$Title$</title>
-  </head>
-  <body>
-  $END$
-  </body>
+<head>
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <h1 class="text-center text-primary">Thêm khách hàng</h1>
+    <form action="/createCustomer" method="post" class="was-validated">
+        <div class="form-group">
+            <label>Name:</label>
+            <input type="text" class="form-control" placeholder="Enter name" name="name" required>
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+        <div class="form-group">
+            <label>Age:</label>
+            <input type="text" class="form-control" placeholder="Enter age" name="age" required>
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+        <div class="form-group">
+            <label>Image:</label>
+            <input type="text" class="form-control" placeholder="Enter image link" name="img" required>
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+        <button type="submit" class="btn btn-primary">Complete</button>
+    </form>
+</div>
+</body>
 </html>

@@ -7,10 +7,12 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-  <head>
-    <title>$Title$</title>
-  </head>
-  <body>
-  $END$
-  </body>
+<head>
+    <title>Title</title>
+</head>
+<body>
+<h2>Vietnamese Dictionary</h2>
+<h2>Search: ${search}</h2>
+<h2>Result: ${result}</h2>
+</body>
 </html>
