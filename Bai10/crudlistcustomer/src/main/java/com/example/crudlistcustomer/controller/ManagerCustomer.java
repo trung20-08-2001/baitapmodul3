@@ -32,8 +32,8 @@ public class ManagerCustomer {
     }
 
     public void editCustomer(int id, String name, int age, String img) {
-        for(Customer customer:customerList){
-            if(customer.getId()==id){
+        for(Customer customer:customerList) {
+            if (customer.getId() == id) {
                 customer.setName(name);
                 customer.setAge(age);
                 customer.setImg(img);

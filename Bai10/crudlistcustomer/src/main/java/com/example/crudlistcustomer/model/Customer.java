@@ -57,13 +57,4 @@ public class Customer {
         this.img = img;
     }
 
-    @Override
-    public String toString() {
-        return "Customer{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", age=" + age +
-                ", img='" + img + '\'' +
-                '}';
-    }
 }
