@@ -16,6 +16,7 @@ public class ProductDiscountCalculator extends HttpServlet {
         printWriter.println("<h1>Discount Price: "+(price-discountAmount)+"</h1>");
         printWriter.println("</body></html>");
 
+
     }
 
 
