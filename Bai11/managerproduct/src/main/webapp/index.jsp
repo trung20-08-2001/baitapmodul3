@@ -34,13 +34,12 @@
             <td>${product.getName()}</td>
             <td><img src="${product.getImg()}" alt="Load..." width="100px" height="100px"></td>
             <td><a href="/editproduct.jsp?id=${product.getId()}" type="button" class="btn btn-success">Edit</a></td>
-            <td><a href="/deleteProduct?id=${product.getId()}" type="button" class="btn btn-danger">Delete</a>
+            <td><a href="/deleteProduct?id=${product.getId()}" type="button" class="btn btn-danger">Delete</a></td>
             <td><a href="/displayDetailProduct?id=${product.getId()}" type="button" class="btn btn-primary">Detail</a>
             </td>
         </tr>
         </c:forEach>
     </table>
-
 </div>
 
 </body>

@@ -3,7 +3,8 @@
 <html>
 <head>
     <title>JSP - Hello World</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
 <section class="vh-100">
@@ -18,29 +19,27 @@
 
                 <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
 
-                    <form style="width: 23rem;">
+                    <form action="/login" method="post" style="width: 23rem;">
 
                         <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Log in</h3>
 
                         <div class="form-outline mb-4">
-                            <input type="email" id="form2Example18" class="form-control form-control-lg" />
+                            <input type="text" id="form2Example18" class="form-control form-control-lg" name="email" required/>
                             <label class="form-label" for="form2Example18">Email address</label>
                         </div>
 
                         <div class="form-outline mb-4">
-                            <input type="password" id="form2Example28" class="form-control form-control-lg" />
+                            <input type="password" id="form2Example28" class="form-control form-control-lg" name="password" required/>
                             <label class="form-label" for="form2Example28">Password</label>
                         </div>
 
                         <div class="pt-1 mb-4">
-                            <button class="btn btn-info btn-lg btn-block" type="button">Login</button>
+                            <button class="btn btn-info btn-lg btn-block" type="submit">Login</button>
                         </div>
 
                         <p class="small mb-5 pb-lg-2"><a class="text-muted" href="#!">Forgot password?</a></p>
-                        <p>Don't have an account? <a href="#!" class="link-info">Register here</a></p>
-
+                        <p>Don't have an account? <a href="/register.jsp" class="link-info">Register here</a></p>
                     </form>
-
                 </div>
 
             </div>
@@ -50,6 +49,7 @@
             </div>
         </div>
     </div>
+
 </section>
 </body>
 </html>
